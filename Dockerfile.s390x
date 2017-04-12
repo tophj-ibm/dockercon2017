@@ -1,10 +1,10 @@
 # s390x dockerfile
 #
-# docker build -t s390x-demo -f Dockerfile.s390x
+# docker build -t s390x-demo -f Dockerfile.s390x .
 #
 # docker run --rm -it -p 8080:8080 s390x-demo
 
-FROM ppc64le/ubuntu
+FROM s390x/ubuntu
 
 RUN apt-get update && apt-get install -y curl
 

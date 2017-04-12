@@ -1,6 +1,6 @@
 # ppc64le dockerfile
 #
-# docker build -t ppc64le-demo -f Dockerfile.ppc64le
+# docker build -t ppc64le-demo -f Dockerfile.ppc64le .
 #
 # docker run --rm -it -p 8080:8080 ppc64le-demo
 
