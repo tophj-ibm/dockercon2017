@@ -18,7 +18,7 @@ ENV GOPATH /go
 
 EXPOSE 8080
 
-COPY img/captain.png /tmp/gopher.png
+COPY img/z.png /tmp/gopher.png
 COPY server.go /tmp/server.go
 
 RUN set -x \
