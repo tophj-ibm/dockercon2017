@@ -5,7 +5,7 @@
 vim ../Dockerfile.x86_64
 
 # then build the image
-docker build -t tophj/x86_64-demo -f Dockerfile.x86_64
+docker build -t tophj/x86_64-demo -f Dockerfile.x86_64 .
 
 # push it like we do any other image (we won't here because, demo gods)
 docker push tophj/x86_64-demo

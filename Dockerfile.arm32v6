@@ -4,7 +4,7 @@
 #
 # docker run --rm -it -p 8080:8080 armhf-demo
 
-FROM armhf/ubuntu
+FROM arm32v6/ubuntu
 
 RUN apt-get update && apt-get install -y curl
 
