@@ -13,6 +13,9 @@ docker push tophj/x86_64-demo
 # now, we can create a manifest list with this image
 docker manifest create tophj/dockercon-demo tophj/x86_64-demo tophj/armhf-demo tophj/aarch64-demo tophj/ppc64e-demo tophj/s390x-demo
 
+# lets look at the manifest we just created
+docker manifest inspect -v tophj/dockercon-demo
+
 # now we will annotate the arm nodes, just because
 docker manifest annotate tophj/dockercon-demo tophj/armhf-demo --os linux --arch arm
 docker manifest annotate tophj/dockercon-demo tophj/aarch64-demo --os linux --arch arm
