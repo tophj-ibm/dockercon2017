@@ -1,20 +1,5 @@
-# s390x dockerfile
-#
-# docker build -t s390x-demo -f Dockerfile.s390x .
-#
-# docker run --rm -it -p 8080:8080 s390x-demo
-
-FROM s390x/ubuntu
-
-RUN apt-get update && apt-get install -y curl
-
-# Install go
-ENV GO_VERSION 1.8.1
-RUN curl -fsSL "https://golang.org/dl/go${GO_VERSION}.linux-s390x.tar.gz" \
-        | tar -xzC /usr/local
-
-ENV PATH /go/bin:/usr/local/go/bin:$PATH
-ENV GOPATH /go
+# alpine based image with go installed
+FROM golang:1.8.5-alpine3.6
 
 EXPOSE 8080
 
@@ -25,3 +10,4 @@ RUN set -x \
         && go build -o /usr/local/demo-server /tmp/server.go
 
 ENTRYPOINT ["/usr/local/demo-server"]
+
