@@ -3,7 +3,7 @@ FROM golang:1.8.5-alpine3.6
 
 EXPOSE 8080
 
-COPY img/pink.png /tmp/gopher.png
+COPY img/amd64.png /tmp/gopher.png
 COPY server.go /tmp/server.go
 
 RUN set -x \
